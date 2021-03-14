@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <BorlandProject>
 	<Transactions>
-    <Transaction>1899.12.30 00:00:00.000.973,C:\Users\user\delhi\Project1.dproj=C:\Users\user\delhi\tepping_test\Project1.dproj</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.475,C:\Users\user\delhi\Unit1.dfm=C:\Users\user\delhi\tepping_test\Unit1.dfm</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.475,C:\Users\user\delhi\Unit1.pas=C:\Users\user\delhi\tepping_test\Unit1.pas</Transaction>
     <Transaction>1899.12.30 00:00:00.000.644,=C:\Users\user\delhi\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.475,C:\Users\user\delhi\tepping_test\Unit1.pas=C:\Users\user\delhi\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.475,C:\Users\user\delhi\tepping_test\Unit1.dfm=C:\Users\user\delhi\Unit1.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.973,C:\Users\user\delhi\tepping_test\Project1.dproj=C:\Users\user\delhi\Project1.dproj</Transaction>
   </Transactions>
 </BorlandProject>
