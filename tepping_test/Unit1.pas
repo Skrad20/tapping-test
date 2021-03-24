@@ -77,6 +77,16 @@ var
   count8:integer;
   count9:integer;
   count10:integer;
+  res_s1:integer;
+  res_s2:integer;
+  res_s3:integer;
+  res_s4:integer;
+  res_s5:integer;
+  res_s6:integer;
+  res_s7:integer;
+  res_s8:integer;
+  res_s9:integer;
+  res_s10:integer;
   res:Real;
   Excel:Variant;
   Sheet:Variant;
@@ -105,6 +115,7 @@ Excel.Visible:=true;
 Sheet:=Excel.ActiveWorkBook.WorkSheets[1];
 Sheet.cells[1,1]:= 'Временные отрезки';
 Sheet.cells[1,2]:= 'Количество нажатий';
+Sheet.cells[1,3]:= 'Количество нажатий за период';
 Sheet.cells[2,1]:= 4;
 Sheet.cells[3,1]:= 8;
 Sheet.cells[4,1]:= 12;
@@ -125,6 +136,16 @@ Sheet.cells[8,2]:= count7;
 Sheet.cells[9,2]:= count8;
 Sheet.cells[10,2]:= count9;
 Sheet.cells[11,2]:= count10;
+Sheet.cells[2,3]:= res_s1;
+Sheet.cells[3,3]:= res_s2;
+Sheet.cells[4,3]:= res_s3;
+Sheet.cells[5,3]:= res_s4;
+Sheet.cells[6,3]:= res_s5;
+Sheet.cells[7,3]:= res_s6;
+Sheet.cells[8,3]:= res_s7;
+Sheet.cells[9,3]:= res_s8;
+Sheet.cells[10,3]:= res_s9;
+Sheet.cells[11,3]:= res_s10;
 end;
 
 procedure TForm1.Timer1Timer(Sender: TObject);
@@ -135,80 +156,92 @@ Timer_label.Caption:= IntToStr( tick );
 
 if tick =4  then
 begin
-  count_1.Caption:= IntToStr( count );
   count1:= count;
+  res_s1:= (count1 - 0);
   res:= (count1 - 0)/4;
+  count_1.Caption:= IntToStr( res_s1 );
   mean1.Caption:= FloatToStr( res );
 end;
 
 if tick = 8  then
 begin
-  count_2.Caption:= IntToStr( count );
   count2:= count;
+  res_s2:= (count2 - count1);
   res:= (count2 - count1)/4;
+  count_2.Caption:= IntToStr( res_s2 );
   mean2.Caption:= FloatToStr( res );
 end;
 
 if tick =12  then
 begin
-  count_3.Caption:= IntToStr( count );
   count3:= count;
+  res_s3:= (count3 - count2);
   res:= (count3 - count2)/4;
+  count_3.Caption:= IntToStr( res_s3 );
   mean3.Caption:= FloatToStr( res );
 end;
 
 if tick =16  then
 begin
-  count_4.Caption:= IntToStr( count );
   count4:= count;
+  res_s4:= (count4 - count3);
   res:= (count4 - count3)/4;
+  count_4.Caption:= IntToStr( res_s4 );
   mean4.Caption:= FloatToStr( res );
 end;
 
 if tick =20  then
 begin
-  count_5.Caption:= IntToStr( count );
   count5:= count;
+  res_s5:= (count5 - count4);
   res:= (count5 - count4)/4;
+  count_5.Caption:= IntToStr( res_s5 );
   mean5.Caption:= FloatToStr( res );
 end;
 
 if tick =24  then
 begin
-  count_6.Caption:= IntToStr( count );
+
   count6:= count;
+  res_s6:= (count6 - count5);
   res:= (count6 - count5)/4;
+  count_6.Caption:= IntToStr( res_s6 );
   mean6.Caption:= FloatToStr( res );
 end;
 
 if tick =28  then
 begin
-  count_7.Caption:= IntToStr( count );
-count7:= count;      res:= (count7 - count6)/4;
+  count7:= count;
+  res_s7:= (count7 - count6);
+  res:= (count7 - count6)/4;
+  count_7.Caption:= IntToStr( res_s7 );
   mean7.Caption:= FloatToStr( res );
 end;
 
 if tick =32  then
 begin
-  count_8.Caption:= IntToStr( count );
   count8:= count;
+  res_s8:= (count8 - count7);
   res:= (count8 - count7)/4;
+  count_8.Caption:= IntToStr( res_s8 );
   mean8.Caption:= FloatToStr( res );
 end;
 
 if tick =36  then
 begin
-  count_9.Caption:= IntToStr( count );
   count9:= count;
+  res_s9:= (count9 - count8);
   res:= (count9 - count8)/4;
+  count_9.Caption:= IntToStr( res_s9 );
   mean9.Caption:= FloatToStr( res );
 end;
 
 if tick =40  then
 begin
-  count_10.Caption:= IntToStr( count );
   count10:= count;
+  res_s10:= (count10 - count9);
   res:= (count10 - count9)/4;
+  count_10.Caption:= IntToStr( res_s10 );
   mean10.Caption:= FloatToStr( res );
   Button1.Enabled:= False;
   Timer1.enabled:=false;
